@@ -1,5 +1,10 @@
+'use strict';
+
+let userName = prompt("What is your name?");
+alert("Welcome " + userName + "! Let's play a guessing game!")
+
 let origin = prompt("Am I from Seattle?").toLowerCase();
-console.log("origin: ", origin)
+// console.log("origin: ", origin)
 if (origin === "yes" || origin === "y") {
   alert("Congrats that's correct!");
 } else {
@@ -7,7 +12,7 @@ if (origin === "yes" || origin === "y") {
 }
 
 let color = prompt("Is my favorite color blue?").toLowerCase();
-console.log("color: ", color)
+// console.log("color: ", color)
 if (color === "no" || color === "n") {
     alert("Congrats, that is correct!");
 } else {
@@ -17,7 +22,7 @@ if (color === "no" || color === "n") {
 
 
 let college =prompt("Did I go to WSU for college?").toLowerCase();
-console.log("college: ", college)
+// console.log("college: ", college)
 if (college === "yes" || college === "y") {
     alert("Congrats, that's correct!");
 } else {
@@ -27,7 +32,7 @@ if (college === "yes" || college === "y") {
 
 
 let dog =prompt("Do I have a dog").toLowerCase();
-console.log("dog: ", dog)
+// console.log("dog: ", dog)
 if (dog === "yes" || dog === "y") {
     alert("Congrats that is correct!");
 } else {
@@ -37,7 +42,7 @@ if (dog === "yes" || dog === "y") {
 
 
 let soda =prompt("Is Diet Mt Dew my favorite soda?").toLowerCase();
-console.log("soda: ", soda)
+// console.log("soda: ", soda)
 if (soda === "yes" || soda === "y") {
     alert("congrats, that is correct!");
 } else {
