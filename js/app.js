@@ -48,3 +48,31 @@ if (soda === "yes" || soda === "y") {
 } else {
     alert("Sorry, that is wrong");
 }
+
+
+let number =prompt("I'm thinking of a number between 1 and 100. Can you guess it??")
+let attempts = 0
+let correctAnswer = 68
+
+while(attempts<=4) {
+  if (number===correctAnswer) {
+      alert("Congrats, thats correct!")
+      break
+  } else {
+      alert("Sorry, try again.")
+      attempts++
+  }
+}
+
+
+
+
+// for(let i = 0; i <= 4; i++) {
+//     if (number===correctAnswer) {
+//         alert("Congrats, thats correct!")
+//         break
+//     } else {
+//         alert("Sorry, try again.")
+//         i++
+//     }
+// }
