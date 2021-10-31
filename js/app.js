@@ -1,6 +1,9 @@
 'use strict';
 
+let correct = 0;
+
 function lab02() {
+
   let userName = prompt("What is your name?");
   alert("Welcome " + userName + "! Let's play a guessing game!")
 
@@ -8,6 +11,7 @@ function lab02() {
   // console.log("origin: ", origin)
   if (origin === "yes" || origin === "y") {
     alert("Congrats that's correct!");
+    correct++;
   } else {
     alert("Sorry, that's wrong.");
   }
@@ -16,6 +20,7 @@ function lab02() {
   // console.log("color: ", color)
   if (color === "no" || color === "n") {
       alert("Congrats, that is correct!");
+      correct++;
   } else {
       alert("Sorry, that's wrong");
       }
@@ -26,6 +31,7 @@ function lab02() {
   // console.log("college: ", college)
   if (college === "yes" || college === "y") {
       alert("Congrats, that's correct!");
+      correct++;
   } else {
       alert("Sorry, that's wrong");
   }
@@ -36,6 +42,7 @@ function lab02() {
   // console.log("dog: ", dog)
   if (dog === "yes" || dog === "y") {
       alert("Congrats that is correct!");
+      correct++;
   } else {
       alert("Sorry, that is wrong");
   }
@@ -46,12 +53,11 @@ function lab02() {
   // console.log("soda: ", soda)
   if (soda === "yes" || soda === "y") {
       alert("congrats, that is correct!");
+      correct++;
   } else {
       alert("Sorry, that is wrong");
   }
-}
 
-function numberGuessingGame() {
   let userGuess = parseInt(prompt("I'm thinking of a number between 1 and 100. Can you guess it??"));
   let attempts = 0;
   let correctAnswer = 68;
@@ -68,13 +74,41 @@ function numberGuessingGame() {
 
   if (userGuess === correctAnswer) {
     alert('You got it right!')
+    correct++;
   }
 
   if (userGuess !== correctAnswer && attempts === 3) {
     alert("Sorry, out of guesses. The correct answer was 68.")
   } 
+
+  let correctAnswers = ["washington", "idaho", "oregon", "california", "pennsylvania"];
+  let maxAttempts = 6;
+  let gotIt = false;
+
+  for(let i=0; i < maxAttempts; i++) {
+    let guessedState = prompt("What states have I been to?").toLowerCase();
+    for(let j=0; j < correctAnswers.length; j++) {
+      let currentState = correctAnswers[j];
+      if(guessedState === currentState){
+        alert("You Got It!");
+        correct++;
+        gotIt = true;
+        break;
+      }
+    }
+
+    if(gotIt) {
+      break;
+    }
+  }
+  alert(correctAnswers)
+  
+
+
 }
+
+console.log('you got ' + correct + ' out of seven questions correct!');
 
 //Execution order:
 lab02();
-numberGuessingGame();
+// numberGuessingGame();
